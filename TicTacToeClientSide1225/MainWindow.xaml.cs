@@ -86,7 +86,7 @@ namespace TicTacToeClientSide1225
             {
                 try
                 {
-                    ClientSocket.Connect(IPAddress.Parse("10.1.18.2"), port);
+                    ClientSocket.Connect(IPAddress.Parse("10.2.27.9"), port);
                 }
                 catch (Exception)
                 {
@@ -106,9 +106,9 @@ namespace TicTacToeClientSide1225
             this.Title = "Player : " + text;
             this.player.Text = this.Title;
 
-            if (text.Contains("Start"))
+            if (text.Contains("\t"))
             {
-                this.GameStatus.Content = "Starting Games";
+                MessageBox.Show("Start Game","Info",MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
